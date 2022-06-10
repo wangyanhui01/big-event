@@ -20,11 +20,8 @@ function getUserInfo(){
   $.ajax({
       type:'GET',
       url:'/my/userinfo',
-     
-      data:{
-        
-      },
       success:function(res){
+        console.log
           if(res.status !== 0){
               return layui.layer.msg('获取用户信息失败')
           }
@@ -50,7 +47,7 @@ function renderAvatar(user){
    $('#welcome').html('欢迎&nbsp;&nbsp'+ name + '!')
    // 按需渲染用户头像
    if(user.user_pic !== null){
-      $('.layui-nav-img').attr('str',user.user_pic).show()
+      $('.layui-nav-img').attr('src',user.user_pic).show()
       $('.text-avatar').hide()
    }else{
     $('.layui-nav-img').hide()

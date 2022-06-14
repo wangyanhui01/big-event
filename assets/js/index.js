@@ -21,7 +21,7 @@ function getUserInfo(){
       type:'GET',
       url:'/my/userinfo',
       success:function(res){
-        console.log
+  
           if(res.status !== 0){
               return layui.layer.msg('获取用户信息失败')
           }
